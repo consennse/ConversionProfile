@@ -54,28 +54,7 @@ export default function Page() {
   
   
   // Apply blurred background
-  useEffect(() => {
-    const formEl = document.querySelector(".form") as HTMLElement | null;
-    if (!formEl) return;
 
-    const img = new window.Image();
-    img.src = "/bg.jpg";
-
-    img.onload = () => {
-      const canvas = document.createElement("canvas");
-      canvas.width = img.naturalWidth;
-      canvas.height = img.naturalHeight;
-
-      const ctx = canvas.getContext("2d");
-      if (!ctx) return;
-
-      ctx.filter = "blur(20px)";
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-
-      formEl.style.backgroundImage = `url(${canvas.toDataURL()})`;
-      formEl.style.backgroundSize = "cover";
-    };
-  }, []);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -135,6 +114,7 @@ export default function Page() {
       </div>
 
       <div className="form">
+      <div className="bg-blur-layer" aria-hidden="true" />
         <div className="heading">
           <h1>Conversion Profile (FGP)</h1>
         </div>
