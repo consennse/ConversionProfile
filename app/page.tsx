@@ -16,7 +16,27 @@ export default function Page() {
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState<any>(null);
 
-  const backend = "https://waldeapi-production.up.railway.app";
+  const backend = "https://waldeapi.fly.dev";
+  useEffect(() => {
+    const fetchStatus = async () => {
+      try {
+        const res = await axios.get(`${backend}/scheduler-status`);
+  
+        // If scheduler was running, show status & pre-fill form
+        if (res.data.running && res.data.config) {
+          setResponse({ message: "Scheduler is already running" });
+          setForm(res.data.config);
+        } else {
+          setResponse({ message: "Scheduler is stopped" });
+        }
+      } catch (e) {
+        console.error("Status error:", e);
+      }
+    };
+  
+    fetchStatus();
+  }, []);
+  
   useEffect(() => {
     // Prevent page unload completely
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
@@ -184,6 +204,10 @@ export default function Page() {
             />
           </div>
         </div>
+        <div className="status">
+  <h3>Scheduler Status:</h3>
+  <pre>{response ? getResponseText(response) : "Loading..."}</pre>
+</div>
 
         {/* Buttons */}
         <div className="buttons">
