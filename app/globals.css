@@ -51,14 +51,13 @@ html, body {
   padding-right:60px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 20px;
+  border-radius: 0px;
   margin-top: 3rem;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: rgb(255, 255, 255);
+  
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  color: #fff;
+  color: #000000;
 }
 
 
@@ -74,17 +73,12 @@ html, body {
   font-family: "Bold", sans-serif;
   width:33%;
   padding: 0.8rem;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0.1px;
+
   font-size: 14px;
-  border-radius: 8px;
+  border-radius: 0px;
 
 }
-.button2{
-  background-color: #fff;
-  color: #182F17;
-}
+
  
 @media (min-width:1440px) {
   .wrapper{
@@ -108,6 +102,7 @@ html, body {
   display: flex;
   flex-direction: column;
   font-size: 16px;
+  color: gray;
 }
 .leftright{
   display: flex;
@@ -142,21 +137,14 @@ html, body {
 }
 
 .button,.button2{
-  font-family: "Bold", sans-serif;
+  font-size: 14px;
   width:100%;
   padding: 0.8rem;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0.1px;
-  font-size: 14px;
-  border-radius: 8px;
+
 
 
 }
-.button2{
-  background-color: #fff;
-  color: #182F17;
-}
+
  
 
 .heading{
@@ -176,6 +164,7 @@ html, body {
   display: flex;
   flex-direction: column;
   font-size: 16px;
+
 }
 .leftright{
   display: flex;
@@ -217,42 +206,32 @@ html, body {
   padding-right:30px;
   margin-left: 0;
   margin-right: 0;
-  border-radius: 20px;
+  border-radius: 0px;
   margin-top: 1.5rem;
+  background-color: #ffffff;
 
-  border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  color: #fff;
+  color: #000000;
 }
 
 }
 .form { position: relative; overflow: hidden; }
 
-.form .bg-blur-layer {
-  position: absolute;
-  inset: 0;
-  background-image: url('/bg.jpg');
-  background-size: cover;
-  background-position: center;
-  filter: blur(9px);
-  transform: translateZ(0);
-  will-change: transform;
-  z-index: 0;
-  transform: scale(1.1); 
-  pointer-events: none;
-}
-.form > * { position: relative; z-index: 1; }
+
 .button, .button2 {
-  transition: all 0.25s ease-in-out;
+  background: linear-gradient(45deg, #b3ca8a, #c4d6a4 50%, #90a66a);
+  background-size: 200% 200%;
+  color: white;
+  transition: background-position 0.5s ease;
 }
 
 .button:hover{
   cursor: pointer;
-  background-color: #fff;
-  color: #182F17;
+  background-position: right center;
+
 }
 .button2:hover{
   cursor: pointer;
-  background-color: transparent;
-  color: #fff;
+  background-position: right center;
+
 }

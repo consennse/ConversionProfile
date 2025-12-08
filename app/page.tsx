@@ -114,7 +114,6 @@ export default function Page() {
       </div>
 
       <div className="form">
-      <div className="bg-blur-layer" aria-hidden="true" />
         <div className="heading">
           <h1>Conversion Profile (FGP)</h1>
         </div>
@@ -128,7 +127,7 @@ export default function Page() {
               name="source_url"
               value={form.source_url}
               onChange={handleChange}
-              className="w-full border-b border-gray-400 bg-transparent text-white focus:outline-none focus:border-white py-1 text-sm"
+              className="w-full border-b border-gray-400 bg-transparent text-grey focus:outline-none  py-1 text-sm"
               placeholder="Enter Feed URL"
             />
           </div>
@@ -141,7 +140,7 @@ export default function Page() {
               name="ftp_host"
               value={form.ftp_host}
               onChange={handleChange}
-              className="w-full border-b border-gray-400 bg-transparent text-white focus:outline-none focus:border-white py-1 text-sm"
+              className="w-full border-b border-gray-400 bg-transparent text-grey focus:outline-none py-1 text-sm"
               placeholder="Enter FTP URL"
             />
           </div>
@@ -154,7 +153,7 @@ export default function Page() {
                 name="ftp_username"
                 value={form.ftp_username}
                 onChange={handleChange}
-                className="w-full border-b border-gray-400 bg-transparent text-white focus:outline-none focus:border-white py-1 text-sm"
+                className="w-full border-b border-gray-400 bg-transparent text-grey focus:outline-none py-1 text-sm"
                 placeholder="Enter Username"
               />
             </div>
@@ -166,7 +165,7 @@ export default function Page() {
                 name="ftp_password"
                 value={form.ftp_password}
                 onChange={handleChange}
-                className="w-full border-b border-gray-400 bg-transparent text-white focus:outline-none focus:border-white py-1 text-sm"
+                className="w-full border-b border-gray-400 bg-transparent text-grey focus:outline-none py-1 text-sm"
                 placeholder="Enter Password"
               />
             </div>
@@ -180,7 +179,7 @@ export default function Page() {
               name="ftp_target_path"
               value={form.ftp_target_path}
               onChange={handleChange}
-              className="w-full border-b border-gray-400 bg-transparent text-white focus:outline-none focus:border-white py-1 text-sm"
+              className="w-full border-b border-gray-400 bg-transparent text-grey focus:outline-none py-1 text-sm"
               placeholder="Enter File Name"
             />
           </div>
