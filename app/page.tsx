@@ -16,7 +16,7 @@ export default function Page() {
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState<any>(null);
 
-  const backend = "https://waldeapi.onrender.com";
+  const backend = "https://waldeapi-production.up.railway.app";
   useEffect(() => {
     // Prevent page unload completely
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
