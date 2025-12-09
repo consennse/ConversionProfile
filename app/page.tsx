@@ -113,8 +113,8 @@ export default function Page() {
     if (resp.message) return resp.message;
   
     // Otherwise, display a summary of the response
-    if (resp.status || resp.removed_images || resp.ftp_path) {
-      return `Status: ${resp.status || "-"}\nRemoved images: ${resp.removed_images || 0}\nFTP Path: ${resp.ftp_path || "-"}`;
+    if (resp.status || resp.removed_images || resp.ftp_target_path) {
+      return `Status: ${resp.status || "-"}\nRemoved images: ${resp.removed_images || 0}\nFTP Path: ${resp.ftp_target_path || "-"}`;
     }
   
     // Fallback for text or AI-style responses
